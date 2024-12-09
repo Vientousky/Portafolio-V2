@@ -1,0 +1,68 @@
+.Inicio {
+    max-width: 1000px;
+    width: 100%;
+    padding-top: 4rem;
+    margin: auto;
+    min-height: 100dvh;
+}
+
+.home-central {
+    display: grid;
+    grid-template-columns: 1fr 40%;
+    gap: 1.5rem;
+}
+
+/* apartado de texto */
+
+.home-texto h1 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    color: #ffad15;
+    font-family: "Aldrich", sans-serif;
+}
+
+.home-texto h2 {
+    font-size: 2.4rem;
+    margin-bottom: 1.5rem;
+}
+
+.home-texto span {
+    color: #f5ab24;
+}
+
+.home-texto p {
+    font-size: 24px;
+    margin-bottom: 1.5rem;
+}
+
+/* apartado de la imagen */
+
+.user-img {
+    position: relative;
+    
+}
+
+.user-img img{
+    width: auto;
+    height: 400px;
+    z-index: 1;
+    border-radius: 1rem;
+    transition: all 0.2s ease-in-out; 
+}
+
+.user-img img:hover {
+    box-shadow: 0 5px 8px rgba(255, 255, 255, 0.493);
+}
+
+.user-img::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 80%;
+    height: 400px;
+    border: 5px solid #fff;
+    border-radius: 1rem;
+    z-index: -1;
+    transform: translate(45px, 35px);
+}

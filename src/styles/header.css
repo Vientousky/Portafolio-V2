@@ -1,0 +1,121 @@
+.cabezera {
+    width: 100%;
+    min-height: 70px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    padding: 0 3rem;
+    z-index: 2;
+
+    animation: encabezado-transition linear both;
+    animation-timeline: scroll(root);
+    animation-range:0 200px ;
+}
+
+@keyframes encabezado-transition {
+    to {
+      background: #24243ea9; /* Fondo transparente para mostrar el efecto de blur */
+      backdrop-filter: blur(5px);
+      -webkit-backdrop-filter: blur(5px); /* Prefijo para navegadores basados en WebKit */
+    }
+  }
+
+/* header name */
+
+.header-name h2 {
+    font-family: "Aldrich", sans-serif;
+    font-size: 2rem;
+    letter-spacing: 1px;
+}
+/* header nav */
+
+.header-nav ul {
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+}
+
+.header-nav a {
+    font-size: 1.4rem;
+}
+
+.header-hover li {
+    position: relative;
+}
+
+.header-hover li::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: rgb(255, 255, 255);
+    transition: width 0.3s cubic-bezier(0.4, 0, 1, 1);
+}
+
+.header-hover li:hover::after {
+    width: 100%;
+}
+
+.header-hover li.active::after {
+    width: 100%;
+    background-color: blueviolet;
+  }
+/* header comfiguracion de la pagina */
+
+.header-confi svg {
+    width: 36px;
+    height: auto;
+    cursor: pointer;
+    animation: rotar 3s linear infinite;
+}
+
+@keyframes rotar {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Menu burger */
+
+.menu-burger {
+    margin: 16px;
+    display: none;
+    width: 32px;
+    height: auto;
+    position: relative;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.menu-burger.activo .Horizontal {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: aqua;
+    border-radius: 1.5rem;
+    margin: 4px 0;
+    transition: transform 0.3s ease, opacity 0.3s;
+}
+
+.menu-burger.activo .Horizontal:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-burger.activo .Horizontal:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-burger.activo .Horizontal:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
