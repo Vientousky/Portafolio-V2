@@ -17,10 +17,10 @@ function Header() {
 
         <nav className='header-nav'>
           <ul className='header-hover'>
-            <li className='active' ><a href="#">Inicio</a></li>
+            <li className='active' ><a href="Home">Inicio</a></li>
             <li><a href="#">Proyectos</a></li>
             <li><a href="#">Sobre mi</a></li>
-            <li><a href="#">Skill</a></li>
+            <li><a href="#servicios">Servicios</a></li>
             <li><a href="#">Contacto</a></li>
           </ul>
         </nav>

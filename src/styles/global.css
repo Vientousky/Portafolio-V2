@@ -20,16 +20,32 @@ p, a{
     text-wrap: pretty;
     color: aliceblue;
 }
-
 :root {
 
-    --FND-HDR-FTR:#24243e ;
+    /* ====> Color para footer, header y fondo <==== */
+    --FND-HDR-FTR: #1e1e3a;
 
-    --FND-OSC:linear-gradient(to top, #0f0c29, #302b63, #24243e);
+    --FND-GRD: linear-gradient(to top, #0f0c29, #302b63, #1e1e3a);
+
+    /* ====> Color para los textos <==== */
+    
+    --TXT-PRN: #faf7ff;
+
+    /* ====> Colores para uso general <==== */
+    --CLR-1: #ffa600; 
+    --CLR-2: #00e1ff; 
+    --CLR-3: #cd4dff; 
+;
 }
 
+
 body  {
-    background: var(--FND-OSC);
+    background: var(--FND-GRD);
     font-family: "Roboto", sans-serif;
-    color: aliceblue;
+    color: var(--TXT-PRN);
+}
+
+.layaut {
+    max-width: 1100px;
+    margin: auto;
 }

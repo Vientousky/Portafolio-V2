@@ -1,0 +1,150 @@
+.servicios-container {
+    width: 100%;
+    min-height: 100vh;
+    padding: 4rem 0;
+}
+
+.texto-h1 {
+    font-size: 6rem;
+    text-align: center;
+    padding: 3rem 0;
+}
+
+.container  {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+}
+
+.card {
+    background: #1e1e1e;
+    padding: 2rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border-radius: 2rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease-in-out;
+}
+
+@property --angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+.card::after, .card::before{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    border-radius: 30px;
+    padding: 4px;
+    animation: spin 4s linear infinite;
+}
+
+.card::before {
+    
+}
+
+.card:nth-child(1)::after {
+    background: conic-gradient(
+        from var(--angle),
+        var(--CLR-1) 0deg,
+        transparent 80deg,
+        transparent 180deg,
+        var(--CLR-1) 180deg,
+        transparent 260deg
+    );
+}
+
+.card:nth-child(2)::after {
+    background: conic-gradient(
+        from var(--angle),
+        var(--CLR-2) 0deg,
+        transparent 60deg,
+        transparent 180deg,
+        var(--CLR-2) 180deg,
+        transparent 240deg
+    );
+}
+
+.card:nth-child(3)::after{
+    background: conic-gradient(
+        from var(--angle),
+        var(--CLR-3) 0deg,
+        transparent 60deg,
+        transparent 180deg,
+        var(--CLR-3) 180deg,
+        transparent 240deg
+    );
+}
+
+
+.card:hover::after,
+.card:hover::before {
+    filter: blur(0rem);
+    animation-play-state: paused; 
+}
+
+@keyframes spin {
+    from {
+        --angle: 0deg;
+    }
+    to {
+        --angle: 360deg;
+    }
+}
+
+
+
+.card svg {
+    margin-bottom: 1rem;
+    width: 70px;
+    height: auto;
+    
+}
+
+.card:nth-child(1) svg {
+    fill: var(--CLR-1);
+}
+
+.card:nth-child(2) svg {
+    fill: var(--CLR-2);
+}
+
+.card:nth-child(3) svg {
+    fill: var(--CLR-3);
+}
+
+
+.card h1 {
+    margin-bottom: 1rem;
+    font-size: 2.2rem;
+    color: #ff6600;
+}
+
+.card:nth-child(1) h1 {
+    color: var(--CLR-1);
+}
+
+.card:nth-child(2) h1 {
+    color: var(--CLR-2);
+}
+
+.card:nth-child(3) h1 {
+    color: var(--CLR-3);
+}
+
+.card p {
+    font-size: 1.2rem;
+}
+
+
+

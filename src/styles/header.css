@@ -63,7 +63,7 @@
 
 .header-hover li.active::after {
     width: 100%;
-    background-color: blueviolet;
+    background-color: #ffad15;
   }
 /* header comfiguracion de la pagina */
 
