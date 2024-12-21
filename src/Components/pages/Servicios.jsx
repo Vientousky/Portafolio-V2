@@ -5,7 +5,9 @@ function Servicios() {
     return (
         <section id='servicios' className='servicios-container'>
 
-            <h1 className='texto-h1'>Servicios</h1>
+            <div className='title-general'>
+                <h1>Servicios</h1>
+            </div>
 
             <div className='container'>
 

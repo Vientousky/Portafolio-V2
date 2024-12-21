@@ -1,41 +1,63 @@
+/* ===> Terminado<=== */
+
 .Inicio {
-    width: 100%;
-    min-height: auto;
-    padding-top: 5.4rem;
+    width: 90%;
+    min-height: 50vh;
+    padding: 3.6rem 0;
     margin: auto;
-    
+
 }
 
 .home-central {
-    display: grid;
-    grid-template-columns: 1fr 40%;
-    gap: 1.9rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1.6rem;
+
+    & .home-texto {
+        flex: 0 0 60%;
+        max-width: 60%;
+    }
+
+    & .user-img {
+        flex:  0 40%;
+        max-width: 40%;
+    }
 }
 
-/* apartado de texto */
+/* ===> Apartado para los texto<=== */
 
-.home-texto h1 {
-    font-size: 3rem;
-    margin-bottom: 2rem;
-    font-family: "Aldrich", sans-serif;
+.home-texto {
+
+    h1,
+    h2,
+    p {
+        margin-bottom: 2rem;
+    }
+
+    h1 {
+        font-size: 3rem;
+        font-weight: 600;
+        font-family: "Aldrich", sans-serif;
+    }
+
+    h2 {
+        font-size: 2.5rem;
+        font-weight: 500;
+    }
+
+    p {
+        font-size: 1.5rem;
+        line-height: 1.6;
+    }
+
+    strong {
+        color: var(--CLR-1);
+    }
 }
 
 
-.home-texto h2 {
-    font-size: 2.4rem;
-    margin-bottom: 1.5rem;
-}
-
-.home-texto span {
-    color: var(--CLR-1);
-}
-
-.home-texto p {
-    font-size: 24px;
-    margin-bottom: 2.5rem;
-}
-
-/* Apartado de los botones  */ 
+/* ===> Apartado de los botones<=== */
 
 .button-enlaces {
     display: flex;
@@ -43,72 +65,82 @@
     align-items: center;
     gap: 1.2rem;
     cursor: pointer;
+
+    .CV {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding: 8px 16px;
+        border: 2px solid var(--CLR-1);
+        color: var(--CLR-1);
+        border-radius: 9999px;
+        transition: transform 0.3s ease;
+
+        &:hover {
+            transform: scale(1.05);
+            /* Usando transform para hacer el efecto de escala */
+        }
+    }
 }
 
-.CV {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    color: var(--TEXTO-DST);
-    border: 2px ridge var(--TEXTO-DST);
-    border-radius: 16px;
-    padding: 6px 10px;
-    
-}
 
-.About {
-    background-color: #000000;
-    padding: 12px 20px;
-    border-radius: 16px;
-}
-
-/* apartado de la imagen */
+/* ===> Apartado para la imagen<=== */
 
 .user-img {
-    position: relative;
-    
-}
-
-.user-img img{
-    width: auto;
-    height: 400px;
-    z-index: 1;
-    border-radius: 1rem;
-    transition: all 0.2s ease-in-out; 
-}
-
-.user-img img:hover {
-    box-shadow: 0 5px 8px rgba(255, 255, 255, 0.493);
-}
-
-.user-img::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 74%;
-    height: 400px;
-    
-    border-radius: 1rem;
-    z-index: -1;
-    transform: translate(45px, 35px);
-}
-
-/* ===> HOME NUMBER <=== */
-
-.sección-estadísticas {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 4rem;
-    margin-top: 1.6rem;
-}
-
-.info {
     display: flex;
-    align-items: center;
-    gap: 16px;
+    justify-content: center;
+
+    img {
+        max-width: 100%;
+        height: 360px;
+        border-radius: 1rem;
+        transition: all 0.2s ease-in-out;
+        box-shadow: 0 5px 8px rgba(255, 255, 255, 0.493);
+        aspect-ratio: 735/898;
+
+        &:hover {
+            transform: scale(1.05);
+            /* Aumenta un 5% */
+        }
+    }
+
 }
 
-.info h3 {
-    font-size: 4rem;
+
+/* ===> APARTADO DE REPONSI <=== */
+
+@media (max-width: 680px) {
+
+    .home-central {
+        display: flex;
+        flex-direction: column-reverse;
+
+        & .home-texto {
+            flex: 0 0 90%;
+            max-width: 90%;
+        }
+    
+        & .user-img {
+            flex: 0 0 90%;
+            max-width: 90%;
+        }
+    }
+
+    .home-texto {
+    
+        h1 {
+
+            font-size: 2.5rem;
+            & span {
+                display: block;
+            }
+        }
+    
+        h2 {
+            font-size: 2.2rem;
+        }
+    
+    }
+    
 }
+

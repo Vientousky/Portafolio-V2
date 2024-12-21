@@ -1,9 +1,10 @@
-import { useState } from 'react'
-import './styles/global.css'
-import Header from './Components/Header'
-import Home from './Components/Home/Home'
-import Proyectos from './Components/pages/Proyectos'
+import Header from './Components/layout/Header'
+import Home from './Components/pages/Home'
 import Servicios from './Components/pages/Servicios'
+import SobreMi from './Components/pages/SobreMi'
+import Proyectos from './Components/projects/Proyectos'
+import Contacto from './Components/pages/Contacto'
+import './styles/global.css'
 
 function App() {
   return (
@@ -12,11 +13,11 @@ function App() {
       <Header />
 
       <main className='layaut'>
-
         <Home />
+        <Servicios />
+        <SobreMi />
         <Proyectos />
-        <Servicios/>
-
+        <Contacto />
       </main>
 
     </>

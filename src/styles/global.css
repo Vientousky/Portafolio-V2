@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Aldrich&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Nabla&display=swap');
 
 
 
@@ -12,40 +11,86 @@
     text-decoration: none;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     text-wrap: balance;
 }
 
-p, a{
+p,
+a {
     text-wrap: pretty;
     color: aliceblue;
 }
-:root {
 
-    /* ====> Color para footer, header y fondo <==== */
-    --FND-HDR-FTR: #1e1e3a;
-
-    --FND-GRD: linear-gradient(to top, #0f0c29, #302b63, #1e1e3a);
-
-    /* ====> Color para los textos <==== */
-    
-    --TXT-PRN: #faf7ff;
-
-    /* ====> Colores para uso general <==== */
-    --CLR-1: #ffa600; 
-    --CLR-2: #00e1ff; 
-    --CLR-3: #cd4dff; 
-;
+html {
+    scroll-behavior: smooth;
 }
 
+:root {
+    
+    /* ====> Colores para modo oscuro <==== */
+    --FND-HDR-FTR: #141428;
+    /* Fondo oscuro */
+    --FND-GRD: linear-gradient(to top, #141428, #302b63, #24244d);
+    /* Gradiente oscuro */
+    --TXT-PRN: #eae8ff;
+    /* Texto claro */
+    --CLR-1: #ff9e16;
+    /* Naranja dorado */
+    --CLR-2: #4dd0ff;
+    /* Azul claro */
+    --CLR-3: #b76cff;
+    /* Púrpura */
+}
 
-body  {
+body.dark {
+
+    /* ====> Colores para modo oscuro <==== */
+    --FND-HDR-FTR: #141428;
+    /* Fondo oscuro */
+    --FND-GRD: linear-gradient(to top, #141428, #302b63, #24244d);
+    /* Gradiente oscuro */
+    --TXT-PRN: #eae8ff;
+    /* Texto claro */
+    --CLR-1: #ff9e16;
+    /* Naranja dorado */
+    --CLR-2: #4dd0ff;
+    /* Azul claro */
+    --CLR-3: #b76cff;
+    /* Púrpura */
+}
+
+body {
     background: var(--FND-GRD);
     font-family: "Roboto", sans-serif;
     color: var(--TXT-PRN);
 }
 
 .layaut {
-    max-width: 1100px;
+    max-width: 1200px;
+    min-height: 100vh;
     margin: auto;
+}
+
+.title-general {
+    font-family: "Aldrich", sans-serif;
+    font-size: 2.5rem;
+    color: var(--CLR-1);
+    text-align: center;
+    margin: 4rem 0;
+    position: relative;
+    
+    h1 {
+        font-size: 3.5rem;
+        margin-bottom: 2rem;
+    }
+
+    p {
+        font-size: 2rem;
+        font-weight: 300;
+    }
 }
